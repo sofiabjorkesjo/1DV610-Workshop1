@@ -2,6 +2,7 @@
 session_start()
 // require_once("words.php");
 ?>
+
 <html>
 <body>
 
@@ -30,6 +31,10 @@ session_start()
 	echo "<input type=\"submit\" name=\"test\" value=\"";
 	echo implode("\"><input type=\"submit\" name=\"test\"value=\"",$arr);
 
+    if($guessedLetters == $random_keys)
+{
+    //g
+}
 ?>
 </form>
 
