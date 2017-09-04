@@ -1,19 +1,27 @@
-
 <?php
-require_once("words.php");
-
+session_start()
+// require_once("words.php");
+?>
 <html>
 <body>
 
 <form action="index.php" method="get">
 <?php
+	var_dump($_SESSION);
 
 	if (isset($_GET["test"])) {
 		if( $_GET["test"] ) {
 
+			// Spara den gissade bokstaven i en array
 			$guessedLetters = array($_GET["test"]);
-			array_push($guessedLetters, $_GET["test"]);
-			echo implode("", $guessedLetters);
+			// Hämta tidigare gissade bokstäver
+			if (isset($_SESSION["letters"])) {
+				$guessedLetters = array_merge($guessedLetters, $_SESSION["letters"]);
+			}
+			// spara alla gissade bokstäver
+			$_SESSION["letters"] = $guessedLetters;
+
+			// echo implode("", $guessedLetters);
 			echo '<br />The ' . $_GET['test'] . ' submit button was pressed<br />';
 		}
 	}
