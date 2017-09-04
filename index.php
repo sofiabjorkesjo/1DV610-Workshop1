@@ -8,8 +8,15 @@ require_once("words.php");
 
 <form action="index.php" method="get">
 <?php
-	if( $_GET["test"] ) {
-		echo '<br />The ' . $_GET['test'] . ' submit button was pressed<br />';
+
+	if (isset($_GET["test"])) {
+		if( $_GET["test"] ) {
+
+			$guessedLetters = array($_GET["test"]);
+			array_push($guessedLetters, $_GET["test"]);
+			echo implode("", $guessedLetters);
+			echo '<br />The ' . $_GET['test'] . ' submit button was pressed<br />';
+		}
 	}
 
 	$arr = range('A', 'Z');
