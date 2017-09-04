@@ -23,6 +23,10 @@ require_once("words.php");
 	echo "<input type=\"submit\" name=\"test\" value=\"";
 	echo implode("\"><input type=\"submit\" name=\"test\"value=\"",$arr);
 
+    if($guessedLetters == $random_keys)
+{
+    //g
+}
 ?>
 </form>
 
