@@ -55,6 +55,8 @@ session_start()
 	$arr = range("A", "Z");
 	echo "<input type=\"submit\" name=\"letter\" value=\"";
 	echo implode("\"><input type=\"submit\" name=\"letter\"value=\"",$arr);
+
+	//fixa nu: lägg in bilderna och gör klasser
 ?>
 </form>
 
