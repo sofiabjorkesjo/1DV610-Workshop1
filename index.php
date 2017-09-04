@@ -1,6 +1,7 @@
 
 <?php
 require_once("words.php");
+?>
 
 <html>
 <body>
